@@ -1,0 +1,13 @@
+#################################################
+HUSR=$(pwd | awk -F"/" '{print $3}')
+alias rsync='rsync -azv --rsync-path="sudo `which rsync`"'
+alias ssh='ssh -o ForwardAgent=yes'
+alias sudo='sudo -E ' ### this keeps history in your /home/username/.bash_history
+export HISTFILESIZE=9999999999
+export HISTSIZE=9999999999
+export HISTTIMEFORMAT="%F %T "
+export HISTFILE=/home/${HUSR}/.bash_history
+shopt -s histappend
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+export EDITOR=vim
+#################################################
