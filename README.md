@@ -1,0 +1,2 @@
+# bashrc-content
+bashrc content
