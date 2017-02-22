@@ -1,0 +1,25 @@
+
+#stty cols 240
+stty cols 120
+#HUSR=$(pwd | awk -F"/" '{print $3}')
+alias rsync='rsync -azv --rsync-path="sudo `which rsync`"'
+alias customerinfo='/var/alertlogic/bin/customerinfo.pl'
+alias sensorinfo="/tmp/wsm/sensorinfo"
+alias sensor="/tmp/wsm/sensor"
+#alias ssh='ssh -o ForwardAgent=yes'
+#alias sudo='sudo -E ' ### this keeps history in your /home/tmoore./bash_history
+export HISTFILESIZE=9999999999
+export HISTSIZE=9999999999
+export HISTTIMEFORMAT="%F %T "
+export HISTFILE=/home/tmoore/.bash_history
+shopt -s histappend
+export EDITOR=vim
+export PROMPT_COMMAND="history -a;history -a /home/tmoore/.saved-history; $PROMPT_COMMAND"
+#################################################
+#alias alssh="sudo -u albert /tmp/wsm/alssh-wsk.sh"
+alias alssh="sudo -u albert /var/alertlogic/bin/alssh-connect"
+##export PATH=/home/lgardner/scripts:~/scripts:$PATH
+##source /home/tmoore/bin/.tools_setup
+
+##alias alssh="sudo -u albert /var/alertlogic/bin/alssh-connect"
+##alias alscp="sudo -u albert /usr/bin/scp -o "PreferredAuthentications=publickey""
